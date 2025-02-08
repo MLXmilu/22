@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.拿到卡号
+        var cardNum = prompt("请输入会员卡号:");
+        // 2.各个位数
+        var ge = cardNum % 10;
+        var shi = parseInt(cardNum / 10) % 10;
+        var bai = parseInt(cardNum / 100) % 10;
+        var qian = parseInt(cardNum / 1000);
+
+        // 3.求各位之和
+        var sum = ge + shi + bai + qian;
+
+        // 4.比较
+        var isBig = sum > 20;
+
+        // 5.窗口打印输出
+        document.write("会员卡号" + cardNum + "各位之和:" + sum + "<br>");
+        document.write("是幸运客户?" + isBig);
+    </script>
+</body>
+
+</html>
